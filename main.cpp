@@ -14,11 +14,10 @@ int main(int argc, char const *argv[])
   a1->setIea(6.8162);
   a1->setIdade(21);
 
-  Turma *lp = new Turma;
+  Turma *lp = new Turma(40);
 
   lp->setNome("T02");
   lp->setDisciplina("Linguagem de Programacao I");
-  lp->setQtdMax(40);
   lp->addAluno(*a1);
   lp->print();
 

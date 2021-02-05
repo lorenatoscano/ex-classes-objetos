@@ -15,7 +15,8 @@ class Turma {
     size_t _qtdMax;
     Aluno* _alunos;
   public:
-    Turma();
+    Turma(int max);
+    ~Turma();
 
     string getNome();
     void setNome(string nome);

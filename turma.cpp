@@ -4,6 +4,18 @@
 
 using namespace std;
 
+/*! Inicia a turma com 0 alunos matriculados e aloca a lista de alunos com o tamanho maximo */
+Turma::Turma(int max) {
+  _qtdAlunos = 0;
+  _qtdMax = max;
+  _alunos = new Aluno[max];
+}
+
+/*! Libera a memória alocada para a lista de alunos */
+Turma::~Turma() {
+  delete[] _alunos;
+}
+
 /*! Getters dos atributos de uma Turma */
 string Turma::getNome() {
   return _nome;
@@ -58,16 +70,4 @@ void Turma::print() {
     cout << "Dados do(a) " << i + 1 << "o aluno(a):" << endl;
     _alunos[i].print();
   }
-}
-
-/*! Inicia a turma com 0 alunos matriculados e aloca a lista de alunos com o tamanho maximo */
-Turma::Turma(int max) {
-  _qtdAlunos = 0;
-  _qtdMax = max;
-  _alunos = new Aluno[max];
-}
-
-/*! Libera a memória alocada para a lista de alunos */
-Turma::~Turma() {
-  delete[] _alunos;
 }

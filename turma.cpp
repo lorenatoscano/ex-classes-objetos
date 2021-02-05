@@ -48,7 +48,7 @@ void Turma::addAluno(Aluno novo) {
   _qtdAlunos++;
 }
 
-/*! Imprime os alunos da turma */
+/*! Imprime as informações da turma */
 void Turma::print() {
   cout << "------------------------------------------------" << endl;
   cout << _disciplina << " - " << _nome << endl;
@@ -63,4 +63,5 @@ void Turma::print() {
 /*! Inicia a turma com 0 alunos matriculados */
 Turma::Turma() {
   _qtdAlunos = 0;
+  _alunos = new Aluno[10];
 }
